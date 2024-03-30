@@ -3,17 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-
 use App\Models\Product;
-
 use Illuminate\Http\JsonResponse;
 
 class ProductApiController extends Controller
-
 {
-
     public function index(): JsonResponse
-
     {
 
         $products = Product::all();
@@ -22,7 +17,6 @@ class ProductApiController extends Controller
     }
 
     public function show(string $id): JsonResponse
-
     {
 
         $product = Product::findOrFail($id);
